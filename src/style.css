@@ -1,0 +1,71 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding-top: 3vh;
+}
+
+#login-component {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin-block: 0.5em;
+}
+
+label, label input {
+    display: block;
+}
+
+label {
+    margin-bottom: 1rem;
+}
+
+input {
+    line-height: 1.5em;
+    font-size: 1.2rem;
+    padding-inline: 0.5em;
+    margin-top: 0.2em;
+    border-radius: 0.4rem;
+    border: 0.15em solid gray;
+}
+
+form {
+    max-width: min-content;
+}
+
+#btn-submit {
+    display: block;
+    margin-inline: auto;
+    padding: 0.5em 2em;
+    border-color: lightgrey;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    background-color: #007AFF;
+    border-radius: 0.2em;
+    box-shadow: none;
+    border-style: none;
+    margin-bottom: 1rem;
+}

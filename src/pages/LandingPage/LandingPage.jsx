@@ -13,8 +13,8 @@ const LandingPage = () => {
                     <img src={logoImg} alt="Logo" id="logo"/>
                 </div>
                 <div id="user-buttons">
-                    <LinkButton to="/login" filled={true} text="Login"/>
-                    <LinkButton to="/cadastro" filled={true} text="Cadastro"/>
+                    <LinkButton to="/login" text="Login"/>
+                    <LinkButton to="/cadastro" text="Cadastro"/>
                 </div>
             </header>
             <main>
@@ -25,7 +25,7 @@ const LandingPage = () => {
                 <div>
                     <img src={sideImg} alt="Imagem de um segurança ao lado de um computador" />
                 </div>
-                <LinkButton to="/cadastro" text="Cadastro" filled={false} color="blue"/>
+                <LinkButton to="/cadastro" text="Cadastro"/>
             </main>
         </>
     );

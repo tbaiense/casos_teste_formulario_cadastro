@@ -1,12 +1,77 @@
 import React from 'react';
+import LinkButton from '../../components/LinkButton/LinkButton';
+import { Link, useNavigate } from 'react-router-dom';
 
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import ModalMensagem from '../../components/ModalMensagem/ModalMensagem';
+import { accounts, appendAccount } from '../../account/accounts'
 
 const Cadastro = () => {
+    const navigate = useNavigate();
+    
+    const [ errorState, setErrorState ] = useState({
+        state: false,
+        message: undefined,
+    });
+
+
+    function handleSubmit(e) {
+        e.preventDefault(); // SubmitEvent.preventDefault()
+        const form = e.target;
+
+        const formData = new FormData(form);
+        const name = formData.get("name");
+        const email = formData.get("email");
+        const pwd = formData.get("password");
+        const pwdAgain = formData.get("password-again");
+
+        setErrorState({
+            state: false,
+            message: undefined,
+        })
+        
+
+        try {
+            let errMsg;
+            // Verifica campos vazios
+            if (!(name && email && pwd && pwdAgain)) {
+                errMsg = 'Nenhum campo pode estar vazio!';
+            } else if (name.length < 3) {
+                errMsg = 'nome deve conter 3 ou mais caracteres';
+            } else if (pwd.length < 8 || pwd.length > 32) {
+                errMsg = 'senhas possuem tamanho inválido (> 8 e < 32)!';
+            } else if (pwd !== pwdAgain) {
+                errMsg = 'senhas não coincidem!';
+            } else {
+                // Validação de email
+                const regex = /^[\w.]+@\w+\.\w+(\.?\w+)*$/gi;
+        
+                if (!regex.test(email)) {
+                    document.getElementById('input-email').focus();
+                    errMsg = 'formato de email inválido!';
+                }
+            }
+
+            if (errMsg) {
+                throw new Error(errMsg);
+            }
+
+            appendAccount(email, pwd);
+            navigate('/login');
+        } catch (err) {
+            setErrorState({
+                state: true,
+                message: err.message,
+            });
+            window.alert(err.message);
+        }
+    }
+
     return (
         <section id="login-component">
+            {/* {errorState.state && <ModalMensagem message={errorState.message}/>} */}
             <h1>Cadastro</h1>
-            <form action="/cadastro" method="get">
+            <form method="post" onSubmit={handleSubmit}>
                 <label htmlFor="input-name">
                     Nome
                     <input type="text" id="input-name" name="name" required autoComplete='name'/>
@@ -27,7 +92,7 @@ const Cadastro = () => {
             </form>
 
             <div>ou</div>
-            <Link to="/login">Login</Link>
+            <LinkButton to="/login" text="Login"/>
         </section>
     );
 };
