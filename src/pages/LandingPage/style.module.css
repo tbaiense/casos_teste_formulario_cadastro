@@ -1,0 +1,41 @@
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #D6D8DE;
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+.conteudo{
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  justify-content: center;
+}
+
+.introducao{
+  display: grid;
+  background: #fff;
+  padding: 40px;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 20px;
+}
+
+.introducao h1{
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.introducao p{
+  font-size: 1.1rem;
+  color: #9A9EA5;
+}
+
+.botoes{
+  display: flex;
+  gap: 20px;
+}

@@ -5,7 +5,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import ModalMensagem from '../../components/ModalMensagem/ModalMensagem';
 import { accounts, appendAccount } from '../../account/accounts'
-
 const Cadastro = () => {
     const navigate = useNavigate();
     
@@ -68,7 +67,7 @@ const Cadastro = () => {
     }
 
     return (
-        <section id="login-component">
+        <section id="login-component" className="cabecalho">
             {/* {errorState.state && <ModalMensagem message={errorState.message}/>} */}
             <h1>Cadastro</h1>
             <form method="post" onSubmit={handleSubmit}>
