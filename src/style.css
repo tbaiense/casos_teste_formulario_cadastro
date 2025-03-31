@@ -11,12 +11,6 @@ html {
     font-family: sans-serif;
 }
 
-#login-component {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-
-}
 
 h1,
 h2,
@@ -32,15 +26,6 @@ label, label input {
 
 label {
     margin-bottom: 1rem;
-}
-
-input {
-    line-height: 1.5em;
-    font-size: 1.2rem;
-    padding-inline: 0.5em;
-    margin-top: 0.2em;
-    border-radius: 0.4rem;
-    border: 0.15em solid gray;
 }
 
 form {
@@ -59,5 +44,4 @@ form {
     border-radius: 0.2em;
     box-shadow: none;
     border-style: none;
-    margin-bottom: 1rem;
 }
