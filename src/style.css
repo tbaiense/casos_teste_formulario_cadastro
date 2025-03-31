@@ -1,47 +1,45 @@
-
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
 
-
-h1,
 h2,
 h3,
 h4,
 h5 {
-    margin-block: 0.5em;
+  margin-block: 0.5em;
 }
 
-label, label input {
-    display: block;
+label,
+label input {
+  display: block;
 }
 
 label {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 form {
-    max-width: min-content;
+  max-width: min-content;
 }
 
 #btn-submit {
-    display: block;
-    margin-inline: auto;
-    padding: 0.5em 2em;
-    border-color: lightgrey;
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: white;
-    background-color: #007AFF;
-    border-radius: 0.2em;
-    box-shadow: none;
-    border-style: none;
+  display: block;
+  margin-inline: auto;
+  padding: 0.5em 2em;
+  border-color: lightgrey;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+  background-color: #007aff;
+  border-radius: 0.2em;
+  box-shadow: none;
+  border-style: none;
 }
