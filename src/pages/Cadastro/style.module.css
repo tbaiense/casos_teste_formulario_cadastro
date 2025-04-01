@@ -55,3 +55,20 @@
   font-size: 16px;
 }
 
+#btnsubmit{
+  display: block;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 0.5em 2em;
+  color: white;
+  background-color: #007AFF;
+  border-radius: 0.2em;
+  box-shadow: none;
+  border-style: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#btnsubmit:hover {
+  background-color: #005BB5;
+  transform: scale(1.05);
+}

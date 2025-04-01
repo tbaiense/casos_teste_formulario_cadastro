@@ -137,7 +137,7 @@ const Cadastro = () => {
             Cadastrar
           </button>
         </form>
-        <div>ou</div>
+        <div>________OU________</div>
         <LinkButton to="/login" text="Login" />
       </div>
     </>
