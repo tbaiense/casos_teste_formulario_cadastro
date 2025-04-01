@@ -6,6 +6,9 @@ import style from "./style.module.css";
 import { useState } from "react";
 import ModalMensagem from "../../components/ModalMensagem/ModalMensagem";
 import { accounts, appendAccount } from "../../account/accounts";
+import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
+
+
 const Cadastro = () => {
   const navigate = useNavigate();
 
@@ -87,6 +90,7 @@ const Cadastro = () => {
         <form method="post" onSubmit={handleSubmit}>
           <label htmlFor="input-name">
             <div className={style.inputcontainer}>
+            <FaUser className={style.icon} />
               <input
                 type="text"
                 id="input-name"
@@ -99,6 +103,7 @@ const Cadastro = () => {
           </label>
           <label htmlFor="input-email">
             <div className={style.inputcontainer}>
+              <FaEnvelope className={style.icon} />
               <input
                 type="email"
                 id="input-email"
@@ -111,6 +116,7 @@ const Cadastro = () => {
           </label>
           <label htmlFor="input-password">
             <div className={style.inputcontainer}>
+              <FaLock className={style.icon} />
               <input
                 type="password"
                 id="input-password"
@@ -123,6 +129,7 @@ const Cadastro = () => {
           </label>
           <label htmlFor="input-password-again">
             <div className={style.inputcontainer}>
+            <FaLock className={style.icon} />
               <input
                 type="password"
                 id="input-password-again"
@@ -137,7 +144,7 @@ const Cadastro = () => {
             Cadastrar
           </button>
         </form>
-        <div>________OU________</div>
+        <div>OU</div>
         <LinkButton to="/login" text="Login" />
       </div>
     </>
