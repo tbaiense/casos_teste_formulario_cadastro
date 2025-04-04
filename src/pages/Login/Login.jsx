@@ -7,6 +7,7 @@ import checkEmail from "../../account/checkEmail";
 import checkAccount from "../../account/checkAccount";
 import imgLogin from "../Login/imageLogin.svg";
 import imgLogo from "../../assets/Pronto 2.svg";
+import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -71,6 +72,7 @@ const Login = () => {
               <form onSubmit={handleSubmit} method="post">
                 <label htmlFor="input-email">
                   <div className={style.inputcontainer}>
+                    <FaEnvelope className={style.icon} />
                     <input
                       type="email"
                       id="input-email"
@@ -83,6 +85,7 @@ const Login = () => {
                 </label>
                 <label htmlFor="input-password">
                   <div className={style.inputcontainer}>
+                    <FaLock className={style.icon} />
                     <input
                       type="password"
                       id="input-password"
