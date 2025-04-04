@@ -9,6 +9,7 @@
 }
 
 .conteudo{
+  margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(2, 500px);
   justify-content: center;
